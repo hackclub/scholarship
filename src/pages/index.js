@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import { Container, Flex, Text, Heading } from '@hackclub/design-system'
 
 const Section = Container.withComponent(Flex)
-Section.defuaultProps = {
+Section.defaultProps = {
   flexDirection: 'column',
   align: 'center',
   justify: 'center',
