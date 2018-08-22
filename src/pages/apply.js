@@ -42,15 +42,8 @@ const ApplyPage = () => (
   <div>
     <Heading>Your application</Heading>
     <form onSubmit={handleSubmit}>
-      <Field
-        label="Email address"
-        name={fieldNames['email']}
-        type="email"
-      />
-      <Field
-        label="First name"
-        name={fieldNames['first_name']}
-      />
+      <Field label="Email address" name={fieldNames['email']} type="email" />
+      <Field label="First name" name={fieldNames['first_name']} />
       <Field label="Last name" name={fieldNames['last_name']} />
       <Field
         label="What school do you go to?"

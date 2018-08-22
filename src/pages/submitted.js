@@ -7,7 +7,7 @@ class SubmittedPage extends Component {
 
   componentDidMount() {
     this.setState({
-      data: storage.get('data')
+      data: storage.get('data'),
     })
   }
 
