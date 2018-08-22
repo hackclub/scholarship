@@ -1,13 +1,17 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Heading, Text, Field, Button } from '@hackclub/design-system'
+import { Heading, Text, Field } from '@hackclub/design-system'
 import api from 'api'
 
 const handleSubmit = e => {
   e.preventDefault()
-  alert(
-    'You just tried to submit. Go eat some spaghetti while you wait for me to implement that'
-  )
+  const gFormPath = 'https://docs.google.com/forms/d/e/1FAIpQLSfLgwkQPwzw6ybaZej4e0L8AW7Y7gjHyVukSaGEkFOq5euxXQ/formResponse'
+  const formData = new FormData(e.target)
+  api.post(gFormPath, { data: formData, mode: 'no-cors' }).then(res => {
+    console.log(res)
+  }).catch(e => {
+    console.error(e)
+  })
 }
 
 const fieldNames = {
@@ -23,7 +27,7 @@ const ApplyPage = () => (
   <div>
     <Heading>Your application</Heading>
     <form onSubmit={handleSubmit}>
-      <Field label="First name" name={fieldNames['first_name']} />
+      <Field label="First name" name={fieldNames['first_name']} id={fieldNames['first_name']} />
       <Field label="Last name" name={fieldNames['last_name']} />
       <Field
         label="What school do you go to?"
