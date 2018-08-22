@@ -6,47 +6,6 @@ import { Heading, Field } from '@hackclub/design-system'
 import * as yup from 'yup'
 import { withFormik } from 'formik'
 
-// # const validate = formData => {
-// #   const schema = yup.object().shape({
-// #       [fieldNames['email']]: yup.string().required().email(),
-// #       [fieldNames['first_name']]: yup.string().required(),
-// #       [fieldNames['last_name']]: yup.string().required(),
-// #       [fieldNames['high_school_name']]: yup.string().required(),
-// #       [fieldNames['project_video_url']]: yup.string().required().url(),
-// #       [fieldNames['project_description']]: yup.string().required(),
-// #       [fieldNames['project_technologies']]: yup.string(),
-// #     })
-// #   const dataObject = {};
-// #   for (const [key, value] of formData.entries()) {
-// #     dataObject[key] = value;
-// #   }
-// #   console.log(dataObject)
-// #   return schema.validateSync(dataObject)
-// # }
-//
-// # const handleSubmit = e => {
-// #   const gFormPath =
-// #     'https://proxyparty.hackclub.com/docs.google.com/forms/d/e/1FAIpQLSfLgwkQPwzw6ybaZej4e0L8AW7Y7gjHyVukSaGEkFOq5euxXQ/formResponse'
-// #   const formData = new FormData(e.target)
-// #   const start = Date.now()
-// #   api
-// #     .post(gFormPath, { data: formData })
-// #     .then(_ => {
-// #       const waitDuration = Math.max(3000 - (Date.now() - start), 100)
-// #       setTimeout(() => {
-// #         let formObj = {}
-// #         for (const [key, value] of formData.entries()) {
-// #           formObj[key] = value
-// #         }
-// #         storage.set('data', formObj)
-// #         location.href = `submitted`
-// #       }, waitDuration)
-// #     })
-// #     .catch(e => {
-// #       console.error(e)
-// #     })
-// # }
-
 const fieldNames = {
   email: 'entry.381661279',
   first_name: 'entry.1165277067',
