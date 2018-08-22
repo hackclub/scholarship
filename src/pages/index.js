@@ -14,7 +14,7 @@ Section.defaultProps = {
 const IndexPage = () => (
   <Fragment>
     <Section>
-      <Heading>Hack Club Scholarship</Heading>
+      <Heading>The Hack Club Scholarship</Heading>
       <Text>
         This scholarship is for high school students who see coding as a
         superpower and take the initiative to code in their own free time —
