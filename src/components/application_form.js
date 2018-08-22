@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import api from 'api'
 import storage from 'storage'
 import Link from 'gatsby-link'
-import { Heading, Field } from '@hackclub/design-system'
+import { Heading, Field, Button } from '@hackclub/design-system'
 import * as yup from 'yup'
 import { withFormik } from 'formik'
 
@@ -15,6 +15,8 @@ const fieldNames = {
   project_description: 'entry.2103516634',
   project_technologies: 'entry.73657139',
 }
+
+const Submit = Button.withComponent(Field)
 
 const InnerForm = ({
   values,
@@ -94,7 +96,7 @@ const InnerForm = ({
       error={touched.project_technologies && errors.project_technologies}
       placeholder="html, css, js..."
     />
-    <Field onSubmit={handleSubmit} disabled={isSubmitting} type="submit" />
+    <Submit onSubmit={handleSubmit} disabled={isSubmitting} type="submit" />
   </form>
 )
 
