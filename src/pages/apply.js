@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import { Heading, Text, Field } from '@hackclub/design-system'
 import api from 'api'
@@ -39,7 +39,7 @@ const fieldNames = {
 }
 
 const ApplyPage = () => (
-  <div>
+  <Fragment>
     <Heading>Your application</Heading>
     <form onSubmit={handleSubmit}>
       <Field label="Email address" name={fieldNames['email']} type="email" />
@@ -74,7 +74,7 @@ const ApplyPage = () => (
       />
       <Field onSubmit={handleSubmit} type="submit" />
     </form>
-  </div>
+  </Fragment>
 )
 
 export default ApplyPage

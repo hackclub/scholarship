@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import { Container, Flex, Text, Heading } from '@hackclub/design-system'
 
@@ -12,7 +12,7 @@ Section.defuaultProps = {
 }
 
 const IndexPage = () => (
-  <div>
+  <Fragment>
     <Section>
       <Heading>Hack Club Scholarship</Heading>
       <Text>
@@ -93,7 +93,7 @@ const IndexPage = () => (
         if you have any questions.
       </Text>
     </Section>
-  </div>
+  </Fragment>
 )
 
 export default IndexPage

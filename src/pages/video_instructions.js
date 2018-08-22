@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'gatsby-link'
 import { Heading, Text } from '@hackclub/design-system'
 
 const VideoInstructionPage = () => (
-  <div>
+  <Fragment>
     <Heading>The demo video</Heading>
     <Text>
       Your application will include a 1 minute demo video uploaded to Youtube.
@@ -22,7 +22,7 @@ const VideoInstructionPage = () => (
       what they are saying. Make sure you watch the video after uploading it to
       Youtube to make sure the audio is good.
     </Text>
-  </div>
+  </Fragment>
 )
 
 export default VideoInstructionPage
