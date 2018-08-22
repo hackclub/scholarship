@@ -2,16 +2,26 @@ import React from 'react'
 import Link from 'gatsby-link'
 import { Heading, Text, Field } from '@hackclub/design-system'
 import api from 'api'
+import storage from 'storage'
 
 const handleSubmit = e => {
   e.preventDefault()
   const gFormPath =
     'https://proxyparty.hackclub.com/docs.google.com/forms/d/e/1FAIpQLSfLgwkQPwzw6ybaZej4e0L8AW7Y7gjHyVukSaGEkFOq5euxXQ/formResponse'
   const formData = new FormData(e.target)
+  const start = Date.now()
   api
     .post(gFormPath, { data: formData })
-    .then(res => {
-      console.log(res)
+    .then(_ => {
+      const waitDuration = Math.max(3000 - (Date.now() - start), 100)
+      setTimeout(() => {
+        let formObj = {}
+        for (const [key, value] of formData.entries()) {
+          formObj[key] = value
+        }
+        storage.set('data', formObj)
+        location.href = `submitted`
+      }, waitDuration)
     })
     .catch(e => {
       console.error(e)
@@ -19,6 +29,7 @@ const handleSubmit = e => {
 }
 
 const fieldNames = {
+  email: 'entry.381661279',
   first_name: 'entry.1165277067',
   last_name: 'entry.951033769',
   high_school_name: 'entry.1908826850',
@@ -32,9 +43,13 @@ const ApplyPage = () => (
     <Heading>Your application</Heading>
     <form onSubmit={handleSubmit}>
       <Field
+        label="Email address"
+        name={fieldNames['email']}
+        type="email"
+      />
+      <Field
         label="First name"
         name={fieldNames['first_name']}
-        id={fieldNames['first_name']}
       />
       <Field label="Last name" name={fieldNames['last_name']} />
       <Field
