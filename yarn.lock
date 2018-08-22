@@ -3238,6 +3238,10 @@ gatsby-plugin-react-helmet@^2.0.11:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-plugin-resolve-src@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-resolve-src/-/gatsby-plugin-resolve-src-1.1.4.tgz#28d60a35de488248d864937c48775613c80bba0c"
+
 gatsby-react-router-scroll@^1.0.18:
   version "1.0.18"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.18.tgz#616ffb801dbdbe4598611e2ff3861b91ac3eecbf"
@@ -7919,6 +7923,10 @@ ultron@~1.1.0:
 unc-path-regex@^0.1.0, unc-path-regex@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/unc-path-regex/-/unc-path-regex-0.1.2.tgz#e73dd3d7b0d7c5ed86fbac6b0ae7d8c6a69d50fa"
+
+unfetch@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-3.1.1.tgz#4ef20a4f3c86b5e1d306b9de091ab6e5e8cd9069"
 
 union-value@^1.0.0:
   version "1.0.0"

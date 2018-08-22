@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { ThemeProvider, colors } from '@hackclub/design-system'
 
 import Header from '../components/header'
 import './index.css'
@@ -12,6 +13,7 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+        { name: 'theme-color', content: colors.primary}
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
