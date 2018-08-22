@@ -5,6 +5,7 @@
   "author": "Max Wofford <max@hackclub.com>",
   "dependencies": {
     "@hackclub/design-system": "^0.0.1-10",
+    "formik": "^1.0.3",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^2.0.11",
@@ -12,7 +13,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
-    "unfetch": "^3.1.1"
+    "unfetch": "^3.1.1",
+    "yup": "^0.26.2"
   },
   "keywords": [
     "gatsby"
