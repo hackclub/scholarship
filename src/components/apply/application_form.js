@@ -3,6 +3,7 @@ import api from 'api'
 import storage from 'storage'
 import Link from 'gatsby-link'
 import { Heading, Field, Button } from '@hackclub/design-system'
+import VideoInstructionModal from 'components/apply/video_instruction_modal'
 import * as yup from 'yup'
 import { withFormik } from 'formik'
 
@@ -19,14 +20,14 @@ const fieldNames = {
 const Submit = Button.withComponent(Field)
 
 const InnerForm = ({
-  values,
-  errors,
-  touched,
-  handleChange,
-  handleBlur,
-  handleSubmit,
-  isSubmitting,
-}) => (
+    values,
+    errors,
+    touched,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    isSubmitting,
+  }) => (
   <form onSubmit={handleSubmit}>
     <Field
       label="Email address"
@@ -65,9 +66,7 @@ const InnerForm = ({
       label={
         <div>
           Video demo of your project. Read the{' '}
-          <Link to="video_instructions" target="_blank">
-            instructions
-          </Link>{' '}
+          <VideoInstructionModal children="instructions"/>{' '}
           on making it.
         </div>
       }
@@ -96,7 +95,7 @@ const InnerForm = ({
       error={touched.project_technologies && errors.project_technologies}
       placeholder="html, css, js..."
     />
-    <Submit onSubmit={handleSubmit} disabled={isSubmitting} type="submit" />
+    <Submit onSubmit={handleSubmit} disabled={isSubmitting} type="submit"/>
   </form>
 )
 
@@ -108,31 +107,23 @@ export default withFormik({
     high_school_name: '',
     project_video_url: '',
     project_description: '',
-    project_technologies: '',
+    project_technologies: ''
   }),
   validationSchema: yup.object().shape({
-    email: yup
-      .string()
-      .required('required')
-      .email(),
-    first_name: yup.string().required('required'),
-    last_name: yup.string().required('required'),
-    high_school_name: yup.string().required('required'),
-    project_video_url: yup
-      .string()
-      .required('required')
-      .url(),
-    project_description: yup.string().required('required'),
-    project_technologies: yup.string(),
-  }),
-  handleSubmit: (data, { setSubmitting }) => {
+      'email': yup.string().required('required').email(),
+      'first_name': yup.string().required('required'),
+      'last_name': yup.string().required('required'),
+      'high_school_name': yup.string().required('required'),
+      'project_video_url': yup.string().required('required').url(),
+      'project_description': yup.string().required('required'),
+      'project_technologies': yup.string(),
+    }),
+  handleSubmit: (data, {setSubmitting}) => {
     const gFormPath =
       'https://proxyparty.hackclub.com/docs.google.com/forms/d/e/1FAIpQLSfLgwkQPwzw6ybaZej4e0L8AW7Y7gjHyVukSaGEkFOq5euxXQ/formResponse'
     const start = Date.now()
     const formData = new FormData()
-    Object.keys(data).forEach(key =>
-      formData.append(fieldNames[key], data[key])
-    )
+    Object.keys(data).forEach(key => formData.append(fieldNames[key], data[key]))
     api
       .post(gFormPath, { data: formData })
       .then(_ => {
@@ -145,5 +136,5 @@ export default withFormik({
       .catch(e => {
         console.error(e)
       })
-  },
+  }
 })(InnerForm)

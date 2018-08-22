@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Heading, Text, Field } from '@hackclub/design-system'
-import ApplicationForm from 'components/application_form'
+import ApplicationForm from 'components/apply/application_form'
 
 const ApplyPage = () => (
   <Fragment>
