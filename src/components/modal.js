@@ -1,7 +1,7 @@
 /* (max@hackclub.com) File copied from https://github.com/hackclub/site/blob/2e6fd60c48455de38ee3dc59f1c625a1674d0f2f/src/components/Modal.js */
 import React, { Fragment } from 'react'
-import { Box, Card, IconButton } from '@hackclub/design-system'
-import { keyframes } from 'styled-components'
+import { Box, IconButton } from '@hackclub/design-system'
+import styled, { keyframes } from 'styled-components'
 import ScrollLock from 'react-scrolllock'
 
 const modalKeyframes = keyframes`
@@ -18,8 +18,9 @@ const modalKeyframes = keyframes`
   }
 `
 
-const Modal = Card.extend`
+const Modal = styled(Box)`
   background-color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.radii[2]};
   box-shadow: ${({ theme }) => theme.boxShadows[2]};
   position: fixed;
   top: 50%;
@@ -32,7 +33,7 @@ const Modal = Card.extend`
   }
 
   // Responsive size control
-  width: ${props => props.w || props.width || '36rem'};
+  width: ${props => props.width || '36rem'};
   max-width: 95vw;
   max-height: 95vh;
   margin-left: auto;
@@ -47,7 +48,7 @@ const Modal = Card.extend`
   }
 `
 
-const Overlayer = Box.extend`
+const Overlayer = styled(Box)`
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.375);
   backdrop-filter: blur(6px);
