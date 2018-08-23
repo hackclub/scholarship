@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import { ThemeProvider, colors } from '@hackclub/design-system'
 
 import Header from '../components/header'
-// import './index.css'
 
 const Layout = ({ children, data }) => (
   <ThemeProvider webfonts>
