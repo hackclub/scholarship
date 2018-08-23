@@ -126,9 +126,9 @@ const IndexPage = () => (
               Quinn Slack
             </Heading.h3>
             <Text f={2} color="slate">
-              Forbes 30 Under 30.
+              <A href="https://techcrunch.com/2017/10/06/sourcegraph-raises-20m-bring-more-live-collaboration-to-programming/">Founder of Sourcegraph</A>
               <br />
-              Founder of Sourcegraph.
+              <A href="https://www.forbes.com/sites/kathleenchaykowski/2017/01/03/30-under-30-2017-the-young-innovators-transforming-enterprise-tech/#3452404d335b">Forbes 30 Under 30</A>
             </Text>
           </Box>
         </Profile>
