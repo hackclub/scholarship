@@ -110,7 +110,7 @@ const IndexPage = () => (
       </Text>
     </Section>
     <Box bg="snow">
-      <Container px={3} py={[5, 6]} align="left">
+      <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
           The Hack Club Scholarship is a $500 award paired with mentorship from
@@ -132,9 +132,15 @@ const IndexPage = () => (
       </Container>
     </Box>
     <Box>
-      <Container px={3} py={[5, 6]} align="left">
-        <Subtitle>We’re Hack Club.</Subtitle>
-        <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
+      <Container px={3} py={[5, 6]} align="center">
+        <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
+        <Text
+          color="black"
+          f={4}
+          mb={4}
+          mx="auto"
+          style={{ maxWidth: '48rem' }}
+        >
           We’re a nonprofit network of high school computer science clubs around
           the world where members learn to code through tinkering and building
           projects.
@@ -161,9 +167,9 @@ const IndexPage = () => (
       <Heading.h2 f={4} mb={2}>
         Contact us
       </Heading.h2>
-      <Flex color="cyan.7" align="center" justify="center">
+      <Flex color="muted" align="center" justify="center">
         <Icon glyph="email" size={32} />
-        <A href="mailto:scholarship@hackclub.com" color="inherit" ml={2}>
+        <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
           scholarship@hackclub.com
         </A>
       </Flex>
