@@ -168,7 +168,11 @@ const LogoLink = styled(Link).attrs({
   }
 `
 const Logo = () => (
-  <LogoLink target="_blank" href="https://hackclub.com" children="Hack Club" />
+  <LogoLink
+    target="_blank"
+    href="https://hackclub.com/?ref=scholarship"
+    children="Hack Club"
+  />
 )
 
 const Header = ({ siteTitle }) => (
