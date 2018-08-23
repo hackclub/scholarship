@@ -1,97 +1,100 @@
 import React, { Fragment } from 'react'
-import Link from 'gatsby-link'
-import { Container, Flex, Text, Heading } from '@hackclub/design-system'
+import GsLink from 'gatsby-link'
+import {
+  Container,
+  Flex,
+  Box,
+  Text,
+  Heading,
+  LargeButton as Button,
+  Link,
+  Card,
+  Image,
+} from '@hackclub/design-system'
+import styled from 'styled-components'
+
+const ApplyButton = Button.withComponent(GsLink)
+
+const Profile = Card.withComponent(Image)
+Profile.defaultProps = {
+  style: { borderRadius: '50%' },
+  boxShadowSize: 'md',
+}
 
 const Section = Container.withComponent(Flex)
 Section.defaultProps = {
   flexDirection: 'column',
+  maxWidth: 52,
   align: 'center',
   justify: 'center',
   mx: 'auto',
-  py: [5, 6],
+  py: [2, 5],
+}
+const SectionHeading = Heading.h3
+SectionHeading.defaultProps = {
+  f: [3, 6],
+  mt: [2, 5, 7],
+  mb: [1, 2],
+}
+const Highlight = Text.span
+Highlight.defaultProps = {
+  bold: true,
 }
 
 const IndexPage = () => (
   <Fragment>
-    <Section>
-      <Heading>The Hack Club Scholarship</Heading>
-      <Text>
-        This scholarship is for high school students who see coding as a
-        superpower and take the initiative to code in their own free time —
-        beyond just what they are assigned in class.
+    <Section mt={5}>
+      <Heading.h1 f={[6, 9]} my={[4, 7]}>
+        The Hack Club <br /> Scholarship
+      </Heading.h1>
+      <hr width="100%" />
+      <Text f={4}>
+        Hack Club is a nonprofit network of computer science clubs where members
+        learn to code through tinkering and building projects.
       </Text>
-      <Text>
-        Applicants will submit a project (website, app, etc.) they built with
-        code and record a video demo. They’ll also include a brief write-up
-        about what they worked on with a video demo.
-      </Text>
-      <Link to="apply">Apply now</Link>
     </Section>
     <Section>
-      <Heading.h3>Prizes</Heading.h3>
-      <ul align="left">
-        <li>
-          1st place: $400 & mentorship sessions with start-up founders
-          <ul>
-            <li>
-              Quinn Slack: Founder of Sourcegraph, Forbes 30 Under 30 2017
-            </li>
-            <li>Tom Preston-Werner: CoFounder of GitHub, Chatterbug</li>
-          </ul>
-        </li>
-        <li>
-          <Text>4 runners-up get $25</Text>
-        </li>
-        <li>
-          <Text>
-            1 applicant from each state will win access to Hack Club’s expedited
-            application process.
-          </Text>
-        </li>
-      </ul>
+      {/* TODO: Add a Modal with more info about Quinn Slack */}
+      <Flex flexDirection={['column', 'row']} align="center">
+        <Text f={4} align={['center', 'right']}>
+          The Hack Club scholarship is a $500 award paired with mentorship from
+          Quinn Slack given to 1 student in Cincinnati who shows outstanding
+          promise as a programmer.
+        </Text>
+        <Box w={0.375} ml={[0, 4]}>
+          <Profile src="quinn_slack.png" />
+        </Box>
+      </Flex>
     </Section>
     <Section>
-      <Heading.h3>Rules</Heading.h3>
-      <ul align="left">
-        <li>
-          <Text>Applications are due on Sept 3rd. at midnight </Text>
-        </li>
-        <li>
-          <Text>
-            Any student currently enrolled in a high school (grades 8-12) in
-            Cincinnati. See if{' '}
-            <Link
-              target="_blank"
-              href="https://en.wikipedia.org/wiki/Cincinnati_Public_Schools#Secondary_Schools"
-            >
-              your state is eligible
-            </Link>
-            .
-          </Text>
-        </li>
-        <li>
-          <Text>
-            If your project was built by a team, you must be able to show you
-            made a significant contribution (ie. version control history).
-          </Text>
-        </li>
-        <li>
-          <Text>
-            The project must be on a public platform (the web, Google Play, App
-            Store).
-          </Text>
-        </li>
-      </ul>
-    </Section>
-    <Section>
-      <Heading.h3>Contact us</Heading.h3>
-      <Text>
-        Contact us at{' '}
-        <Link to="mailto:scholarship@hackclub.com">
-          scholarship@hackclub.com
-        </Link>{' '}
-        if you have any questions.
+      <Text f={4}>
+        Coding is the closest thing we have today to a superpower. The Hack Club
+        scholarship exists to identify promising young makers to give them
+        resources to expand their ambition.
       </Text>
+    </Section>
+    <Box bg="#111" color="white" mt={7}>
+      <Section>
+        <SectionHeading mt={5} mb={3}>
+          You can apply
+        </SectionHeading>
+        <Text fontWeight="lightest" f={3}>
+          Applications are open from <Text.span bold>August 25th</Text.span>{' '}
+          through <Text.span bold>September 9th</Text.span> and decisions will
+          be released a week after.
+        </Text>
+        <Card bg="#111">
+          <ApplyButton to="apply" bg="white" color="black" mt={4} mb={5}>
+            Apply now
+          </ApplyButton>
+        </Card>
+      </Section>
+    </Box>
+    <Section mb={5}>
+      <SectionHeading>Contact us</SectionHeading>
+      <Link href="mailto:scholarship@hackclub.com">
+        scholarship@hackclub.com
+      </Link>
     </Section>
   </Fragment>
 )
