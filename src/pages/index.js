@@ -139,20 +139,22 @@ const IndexPage = () => (
           the world where members learn to code through tinkering and building
           projects.
         </Text>
-        <LearnButton href="https://hackclub.com/?ref=scholarship">
+        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
           Learn more
         </LearnButton>
       </Container>
     </Box>
     <Box bg={dark} color="white">
-      <Container px={3} py={[5, 6]} align="left">
+      <Container px={3} py={[5, 6]}>
         <Subtitle>Apply now.</Subtitle>
         <Text color="smoke" f={4} mb={4} style={{ maxWidth: '48rem' }}>
           Applications are open from <Highlight>August 25th</Highlight> through{' '}
           <Highlight>September 9th</Highlight>. Decisions will be released a
           week after.
         </Text>
-        <ApplyButton to="/apply">Apply now</ApplyButton>
+        <ApplyButton to="/apply" bg="pink.5">
+          Apply now
+        </ApplyButton>
       </Container>
     </Box>
     <Box bg="snow" align="center" px={3} py={5}>
