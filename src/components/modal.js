@@ -50,7 +50,7 @@ const Modal = styled(Box)`
 
 const Overlayer = styled(Box)`
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.375);
+  background-color: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(6px);
 
   position: fixed;
