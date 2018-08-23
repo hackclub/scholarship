@@ -151,6 +151,7 @@ const LogoLink = styled(Link).attrs({
     top: 0;
     color: ${({ theme }) => theme.colors.muted};
     background: ${({ theme }) => theme.colors.gray[1]};
+    opacity: .875;
     overflow: hidden;
     clip: rect(0, 256px, 0, 0);
   }
@@ -158,13 +159,13 @@ const LogoLink = styled(Link).attrs({
   &:after {
     left: 2px;
     text-shadow: -1px 0 ${({ theme }) => theme.colors.primary};
-    animation: ${animation1} 2s infinite linear alternate-reverse;
+    animation: ${animation1} 3s infinite linear alternate-reverse;
   }
 
   &:before {
-    left: -2px;
+    left: -1px;
     text-shadow: -1px 0 ${({ theme }) => theme.colors.alt};
-    animation: ${animation2} 4s infinite linear alternate-reverse;
+    animation: ${animation2} 5s infinite linear alternate-reverse;
   }
 `
 const Logo = () => (
