@@ -135,7 +135,7 @@ const animation2 = keyframes`
 `
 const LogoLink = styled(Link).attrs({
   bold: true,
-  f: [4, 5],
+  f: 4,
   color: 'muted',
   align: 'left',
 })`
@@ -150,7 +150,7 @@ const LogoLink = styled(Link).attrs({
     position: absolute;
     top: 0;
     color: ${({ theme }) => theme.colors.muted};
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.gray[1]};
     overflow: hidden;
     clip: rect(0, 256px, 0, 0);
   }
@@ -163,7 +163,7 @@ const LogoLink = styled(Link).attrs({
 
   &:before {
     left: -2px;
-    text-shadow: -1px 0 ${({ theme }) => theme.colors.info};
+    text-shadow: -1px 0 ${({ theme }) => theme.colors.alt};
     animation: ${animation2} 4s infinite linear alternate-reverse;
   }
 `
@@ -172,9 +172,14 @@ const Logo = () => (
 )
 
 const Header = ({ siteTitle }) => (
-  <Flex justify="center" align="center" mt={[2, 4]} px={[3, 5]}>
+  <Flex bg="gray.1" justify="center" align="center" py={[2]} px={[3, 4]} mb={4}>
     <Logo />
-    <Link ml="auto" color="muted" href="mailto:scholarship@hackclub.com">
+    <Link
+      ml="auto"
+      color="muted"
+      href="mailto:scholarship@hackclub.com"
+      style={{ lineHeight: 0 }}
+    >
       <Icon glyph="email" />
     </Link>
   </Flex>
