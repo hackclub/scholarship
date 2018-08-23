@@ -15,6 +15,7 @@ const Layout = ({ children, data }) => (
         { name: 'theme-color', content: colors.primary },
       ]}
     />
+    <Header />
     {children()}
   </ThemeProvider>
 )
