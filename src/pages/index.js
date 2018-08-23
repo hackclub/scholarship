@@ -66,6 +66,7 @@ const Profile = styled(Container.withComponent(Flex)).attrs({
   bg: 'white',
   p: [3, 4],
   mx: 0,
+  align: 'center'
 })`
   border-radius: ${({ theme }) => theme.radii[2]};
 `
@@ -119,12 +120,14 @@ const IndexPage = () => (
         </Text>
         {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
-          <Avatar size={64} src="quinn_slack.png" />
+          <Avatar size={72} src="quinn_slack.png" />
           <Box align="left" ml={[3, 4]}>
             <Heading.h3 f={4} mb={1}>
               Quinn Slack
             </Heading.h3>
             <Text f={2} color="slate">
+              Forbes 30 Under 30.
+              <br />
               Founder of Sourcegraph.
             </Text>
           </Box>
