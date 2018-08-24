@@ -17,7 +17,7 @@ class VideoInstructionModal extends Component {
         {this.state.active && (
           <Fragment>
             <Modal align="left" my={4} p={[3, 4]}>
-              <CloseButton type="button" />
+              {/* <CloseButton type="button" onClick={() => this.toggle} /> */}
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
               <Text>
                 Your application will include a 1 minute demo video uploaded to
@@ -42,7 +42,7 @@ class VideoInstructionModal extends Component {
                 good.
               </Text>
             </Modal>
-            <Overlay />
+            <Overlay onClick={this.toggle} />
           </Fragment>
         )}
       </Fragment>
