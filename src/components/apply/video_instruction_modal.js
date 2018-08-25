@@ -28,12 +28,14 @@ class VideoInstructionModal extends Component {
                 </Text.span>
                 , or we won’t be able to see it.
               </Text>
+              <br />
               <Text>
                 Don’t include special effects or put time into transitions — we
                 don’t want this to turn into a video making contest. If you’re
                 going to spend time making something cool, put it into your
                 project.
               </Text>
+              <br />
               <Text>
                 Don’t include loud background music — it sucks when we have to
                 give up on an application 10 seconds into their video because we
