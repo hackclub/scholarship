@@ -135,9 +135,9 @@ const IndexPage = () => (
       </Container>
     </Box>
     <Box bg={dark} color="white">
-      <Container px={3} py={[5, 6]} align="right">
+      <Container px={3} py={[5, 6]} align="center">
         <Subtitle>Apply now.</Subtitle>
-        <Text color="smoke" f={4} mb={4} ml="auto" style={{ maxWidth: '48rem' }}>
+        <Text color="smoke" f={4} mb={4} mx="auto" style={{ maxWidth: '48rem' }}>
           Applications are open from <Highlight>August 25th</Highlight> through{' '}
           <Highlight>September 9th</Highlight>. Decisions will be released a
           week after.
@@ -148,13 +148,12 @@ const IndexPage = () => (
       </Container>
     </Box>
     <Box>
-      <Container px={3} py={[5, 6]} align="center">
+      <Container px={3} py={[5, 6]} align="left">
         <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
         <Text
           color="black"
           f={4}
           mb={4}
-          mx="auto"
           style={{ maxWidth: '48rem' }}
         >
           We’re a nonprofit network of high school computer science clubs around
