@@ -112,7 +112,7 @@ export default withFormik({
     email: yup
       .string()
       .required('required')
-      .email(),
+      .email('must be a valid email'),
     first_name: yup.string().required('required'),
     last_name: yup.string().required('required'),
     high_school_name: yup.string().required('required'),
