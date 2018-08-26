@@ -41,8 +41,7 @@ const btn = {
   py: 3,
   px: 4,
   f: 2,
-  chevronRight: true,
-  target: '_blank',
+  chevronRight: true
 }
 const LearnButton = styled(Button).attrs(btn)`
   background-image: linear-gradient(
