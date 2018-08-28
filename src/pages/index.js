@@ -31,6 +31,11 @@ const HeroIcon = styled(Icon)`
   );
 `
 
+const Question = styled(Text).attrs({ f: 4, mt: 3, bold: true })`
+  maxwidth: 48rem;
+`
+const Answer = styled(Text).attrs({ f: 4, color: 'slate' })``
+
 const Title = styled(Heading.h1).attrs({ f: [6, 8, 9], mt: 2, mb: [3, 4] })`
   line-height: 1;
 `
@@ -147,11 +152,38 @@ const IndexPage = () => (
         >
           Applications are open from <Highlight>August 25th</Highlight> through{' '}
           <Highlight>September 9th</Highlight>. Decisions will be released a
-          week after.
+          week later.
         </Text>
         <ApplyButton to="/apply" bg="pink.5">
           Apply now
         </ApplyButton>
+      </Container>
+    </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Subtitle f={[5, 6]}>FAQ</Subtitle>
+        <Question>Can I apply?</Question>
+        <Answer>
+          If you’re currently enrolled as a student in Cincinnati public
+          schools, the answer is yes.
+        </Answer>
+        <Question>Do I need to be in a Hack Club?</Question>
+        <Answer>
+          No, and being part of one will not influence your chances.
+        </Answer>
+        <Question>What can I use the money on?</Question>
+        <Answer>
+          You can use it to fly out to San Francisco to meet Quinn Slack in
+          person.
+        </Answer>
+        <Question>I have another question</Question>
+        <Answer>
+          Please reach out to
+          <A href="mailto:grant@hackclub.com" color="slate" ml={2}>
+            grant@hackclub.com
+          </A>{' '}
+          😊.
+        </Answer>
       </Container>
     </Box>
     <Box>
