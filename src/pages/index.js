@@ -66,7 +66,7 @@ const Profile = styled(Container.withComponent(Flex)).attrs({
   bg: 'white',
   p: [3, 4],
   mx: 0,
-  align: 'center'
+  align: 'center',
 })`
   border-radius: ${({ theme }) => theme.radii[2]};
 `
@@ -97,13 +97,11 @@ const IndexPage = () => (
       <Flex justify="center" color="pink.5">
         <HeroIcon glyph="idea" size={72} />
       </Flex>
-      <Title>
-        The Hack Grant
-      </Title>
+      <Title>The Hack Grant</Title>
       <Text f={4}>
-        Coding is the closest thing we have today to a superpower. The Hack Grant exists to identify promising{' '}
-        <Highlight>young makers</Highlight> to give them resources to expand
-        their ambition.
+        Coding is the closest thing we have today to a superpower. The Hack
+        Grant exists to identify promising <Highlight>young makers</Highlight>{' '}
+        to give them resources to expand their ambition.
       </Text>
       <Text f={4} mt={3}>
         Open in Cincinnati until September 9
@@ -113,9 +111,9 @@ const IndexPage = () => (
       <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          The Hack Grant is a $250 award paired with mentorship from
-          Quinn Slack given to 1 student in Cincinnati who shows outstanding
-          promise as a programmer.
+          The Hack Grant is a $250 award paired with mentorship from Quinn Slack
+          given to 1 student in Cincinnati who shows outstanding promise as
+          makers, innovators, & programmers.
         </Text>
         {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
@@ -125,9 +123,13 @@ const IndexPage = () => (
               Quinn Slack
             </Heading.h3>
             <Text f={2} color="slate">
-              <A href="https://techcrunch.com/2017/10/06/sourcegraph-raises-20m-bring-more-live-collaboration-to-programming/">Founder of Sourcegraph</A>
+              <A href="https://techcrunch.com/2017/10/06/sourcegraph-raises-20m-bring-more-live-collaboration-to-programming/">
+                Founder of Sourcegraph
+              </A>
               <br />
-              <A href="https://www.forbes.com/sites/kathleenchaykowski/2017/01/03/30-under-30-2017-the-young-innovators-transforming-enterprise-tech/#3452404d335b">Forbes 30 Under 30</A>
+              <A href="https://www.forbes.com/sites/kathleenchaykowski/2017/01/03/30-under-30-2017-the-young-innovators-transforming-enterprise-tech/#3452404d335b">
+                Forbes 30 Under 30
+              </A>
             </Text>
           </Box>
         </Profile>
@@ -136,7 +138,13 @@ const IndexPage = () => (
     <Box bg={dark} color="white">
       <Container px={3} py={[5, 6]} align="center">
         <Subtitle>Apply now.</Subtitle>
-        <Text color="smoke" f={4} mb={4} mx="auto" style={{ maxWidth: '48rem' }}>
+        <Text
+          color="smoke"
+          f={4}
+          mb={4}
+          mx="auto"
+          style={{ maxWidth: '48rem' }}
+        >
           Applications are open from <Highlight>August 25th</Highlight> through{' '}
           <Highlight>September 9th</Highlight>. Decisions will be released a
           week after.
@@ -149,12 +157,7 @@ const IndexPage = () => (
     <Box>
       <Container px={3} py={[5, 6]} align="left">
         <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
-        <Text
-          color="black"
-          f={4}
-          mb={4}
-          style={{ maxWidth: '48rem' }}
-        >
+        <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
           We’re a nonprofit network of high school computer science clubs around
           the world where members learn to code through tinkering and building
           projects.
