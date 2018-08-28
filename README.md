@@ -1,13 +1,13 @@
-# grant
+# scholarship
 
-Hack Club's grant website, live at https://grant.hackclub.com
+Hack Club's scholarship website, live at https://scholarship.hackclub.com
 
 ## Setup
 
 1. Clone the repository and enter it
 ```
-git clone https://github.com/hackclub/grant.git
-cd grant
+git clone https://github.com/hackclub/scholarship.git
+cd scholarship
 ```
 2. Install packages & run
 ```

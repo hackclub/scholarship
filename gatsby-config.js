@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'The Hack Club Grant',
+    title: 'The Hack Club Scholarship',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

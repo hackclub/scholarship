@@ -127,10 +127,10 @@ const IndexPage = () => (
       <Flex justify="center" color="pink.5">
         <HeroIcon glyph="idea" size={72} />
       </Flex>
-      <Title>The Hack Grant</Title>
+      <Title>The Hack Club Scholarship</Title>
       <Text f={4}>
-        Coding is the closest thing we have today to a superpower. The Hack
-        Grant exists to identify promising <Highlight>young makers</Highlight>{' '}
+        Coding is the closest thing we have today to a superpower. The Hack Club
+        Scholarship exists to identify promising <Highlight>young makers</Highlight>{' '}
         to give them resources to expand their ambition.
       </Text>
       <Text f={4} mt={3}>
@@ -141,7 +141,7 @@ const IndexPage = () => (
       <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          The Hack Grant is a $250 award paired with mentorship from Quinn Slack
+          The Hack Club Scholarship is a $250 award paired with mentorship from Quinn Slack
           given to 1 student in Cincinnati who shows outstanding promise as
           makers, innovators, & programmers.
         </Text>
@@ -220,7 +220,7 @@ const IndexPage = () => (
         <Question>Do I need to be in a Hack Club?</Question>
         <Answer>
           No, you don’t need to be, and being a member or leader will not
-          influence your chances. This grant is open to any high schoolers.
+          influence your chances. This scholarship is open to any high schoolers.
         </Answer>
         <Question>What can I use the money on?</Question>
         <Answer>
@@ -230,8 +230,8 @@ const IndexPage = () => (
         <Question>I have another question</Question>
         <Answer>
           Please reach out to
-          <A href="mailto:grant@hackclub.com" color="slate" ml={2}>
-            grant@hackclub.com
+          <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
+            scholarship@hackclub.com
           </A>{' '}
           😊.
         </Answer>
@@ -245,7 +245,7 @@ const IndexPage = () => (
           the world where members learn to code through tinkering and building
           projects.
         </Text>
-        <LearnButton href="https://hackclub.com/?ref=grant" bg="cyan.5">
+        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
           Learn more
         </LearnButton>
       </Container>
@@ -256,8 +256,8 @@ const IndexPage = () => (
       </Heading.h2>
       <Flex color="muted" align="center" justify="center">
         <Icon glyph="email" size={32} />
-        <A href="mailto:grant@hackclub.com" color="slate" ml={2}>
-          grant@hackclub.com
+        <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
+          scholarship@hackclub.com
         </A>
       </Flex>
     </Box>
