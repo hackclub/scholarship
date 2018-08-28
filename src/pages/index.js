@@ -10,6 +10,7 @@ import {
   Link as A,
   Card,
   Avatar,
+  Icon as DSIcon,
   hexa,
 } from '@hackclub/design-system'
 import Icon from 'spectrum-icons'
@@ -30,6 +31,30 @@ const HeroIcon = styled(Icon)`
     0 0 4px ${({ theme }) => hexa(theme.colors.pink[5], 0.75)}
   );
 `
+
+const StepWrapper = styled(Box)`
+  position: relative
+  &:before {
+    z-index: -1;
+    content: '${({ index }) => index}.';
+    font-size: 6em;
+    position: absolute;
+    top: 15px;
+    left: -25px;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.gray[1]};
+    line-height: 0;
+  }
+`
+const Step = ({ title, icon, message, index }) => (
+  <StepWrapper style={{ maxWidth: '20rem' }} px={2} index={index}>
+    <DSIcon name={icon} size={48} />
+    <Box>
+      <Heading>{title}</Heading>
+      <Text>{message}</Text>
+    </Box>
+  </StepWrapper>
+)
 
 const Question = styled(Text).attrs({ f: 4, mt: 3, bold: true })`
   maxwidth: 48rem;
@@ -140,6 +165,31 @@ const IndexPage = () => (
         </Profile>
       </Container>
     </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Flex w={1} justify="space-between">
+          <Subtitle f={[5, 6]}>Here’s the process.</Subtitle>
+          <Step
+            index={1}
+            title="Record"
+            message="Shoot a 2 minute video about your project."
+            icon="videocam"
+          />
+          <Step
+            index={2}
+            title="Submit"
+            message="Fill out your application submit it for review."
+            icon="assignment"
+          />
+          <Step
+            index={3}
+            title="Receive"
+            message="our decision a week after submissions close."
+            icon="event_available"
+          />
+        </Flex>
+      </Container>
+    </Box>
     <Box bg={dark} color="white">
       <Container px={3} py={[5, 6]} align="center">
         <Subtitle>Apply now.</Subtitle>
@@ -169,7 +219,8 @@ const IndexPage = () => (
         </Answer>
         <Question>Do I need to be in a Hack Club?</Question>
         <Answer>
-          No, and being part of one will not influence your chances.
+          No, you don’t need to be, and being a member or leader will not
+          influence your chances. This grant is open to any high schoolers.
         </Answer>
         <Question>What can I use the money on?</Question>
         <Answer>
