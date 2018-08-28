@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { Link, Text, Heading, Flex } from '@hackclub/design-system'
+import { Text, Heading, Flex } from '@hackclub/design-system'
 import { Modal, CloseButton, Overlay } from 'components/modal'
+import Link from 'gatsby-link'
 
 class VideoInstructionModal extends Component {
   state = { active: false }
@@ -11,16 +12,16 @@ class VideoInstructionModal extends Component {
   render() {
     return (
       <Fragment>
-        <a onClick={() => this.setState({ active: true })}>
+        <Link onClick={() => this.setState({ active: true })}>
           {this.props.children}
-        </a>
+        </Link>
         {this.state.active && (
           <Fragment>
             <Modal align="left" my={4} p={[3, 4]}>
               {/* <CloseButton type="button" onClick={() => this.toggle} /> */}
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
               <Text>
-                Your application will include a 1 minute demo video uploaded to
+                Your application will include a 3 minute demo video uploaded to
                 Youtube. If you don’t want other people to see it, make it
                 unlisted.{' '}
                 <Text.span bold>
