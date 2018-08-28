@@ -171,7 +171,7 @@ const LogoLink = styled(Link).attrs({
 const Logo = () => (
   <LogoLink
     target="_blank"
-    href="https://hackclub.com/?ref=scholarship"
+    href="https://hackclub.com/?ref=grant"
     children="Hack Club"
   />
 )
@@ -182,7 +182,7 @@ const Header = ({ siteTitle }) => (
     <Link
       ml="auto"
       color="muted"
-      href="mailto:scholarship@hackclub.com"
+      href="mailto:grant@hackclub.com"
       style={{ lineHeight: 0 }}
     >
       <Icon glyph="email" />

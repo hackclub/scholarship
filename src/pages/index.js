@@ -98,11 +98,10 @@ const IndexPage = () => (
         <HeroIcon glyph="idea" size={72} />
       </Flex>
       <Title>
-        The Hack Club <br /> Scholarship
+        The Hack Grant
       </Title>
       <Text f={4}>
-        Coding is the closest thing we have today to a superpower. The Hack Club
-        Scholarship exists to identify promising{' '}
+        Coding is the closest thing we have today to a superpower. The Hack Grant exists to identify promising{' '}
         <Highlight>young makers</Highlight> to give them resources to expand
         their ambition.
       </Text>
@@ -114,7 +113,7 @@ const IndexPage = () => (
       <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          The Hack Club Scholarship is a $500 award paired with mentorship from
+          The Hack Grant is a $250 award paired with mentorship from
           Quinn Slack given to 1 student in Cincinnati who shows outstanding
           promise as a programmer.
         </Text>
@@ -160,7 +159,7 @@ const IndexPage = () => (
           the world where members learn to code through tinkering and building
           projects.
         </Text>
-        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
+        <LearnButton href="https://hackclub.com/?ref=grant" bg="cyan.5">
           Learn more
         </LearnButton>
       </Container>
@@ -171,8 +170,8 @@ const IndexPage = () => (
       </Heading.h2>
       <Flex color="muted" align="center" justify="center">
         <Icon glyph="email" size={32} />
-        <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
-          scholarship@hackclub.com
+        <A href="mailto:grant@hackclub.com" color="slate" ml={2}>
+          grant@hackclub.com
         </A>
       </Flex>
     </Box>
