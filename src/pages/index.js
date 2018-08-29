@@ -10,6 +10,7 @@ import {
   Link as A,
   Card,
   Avatar,
+  Icon as DSIcon,
   hexa,
 } from '@hackclub/design-system'
 import Icon from 'spectrum-icons'
@@ -30,6 +31,35 @@ const HeroIcon = styled(Icon)`
     0 0 4px ${({ theme }) => hexa(theme.colors.pink[5], 0.75)}
   );
 `
+
+const StepWrapper = styled(Box)`
+  position: relative
+  &:before {
+    z-index: -1;
+    content: '${({ index }) => index}.';
+    font-size: 6em;
+    position: absolute;
+    top: 15px;
+    left: -25px;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.gray[1]};
+    line-height: 0;
+  }
+`
+const Step = ({ title, icon, message, index }) => (
+  <StepWrapper style={{ maxWidth: '20rem' }} px={2} index={index}>
+    <DSIcon name={icon} size={48} />
+    <Box>
+      <Heading>{title}</Heading>
+      <Text>{message}</Text>
+    </Box>
+  </StepWrapper>
+)
+
+const Question = styled(Text).attrs({ f: 4, mt: 3, bold: true })`
+  maxwidth: 48rem;
+`
+const Answer = styled(Text).attrs({ f: 4, color: 'slate' })``
 
 const Title = styled(Heading.h1).attrs({ f: [6, 8, 9], mt: 2, mb: [3, 4] })`
   line-height: 1;
@@ -65,7 +95,7 @@ const Profile = styled(Container.withComponent(Flex)).attrs({
   bg: 'white',
   p: [3, 4],
   mx: 0,
-  align: 'center'
+  align: 'center',
 })`
   border-radius: ${({ theme }) => theme.radii[2]};
 `
@@ -96,14 +126,11 @@ const IndexPage = () => (
       <Flex justify="center" color="pink.5">
         <HeroIcon glyph="idea" size={72} />
       </Flex>
-      <Title>
-        The Hack Club <br /> Scholarship
-      </Title>
+      <Title>The Hack Club Scholarship</Title>
       <Text f={4}>
         Coding is the closest thing we have today to a superpower. The Hack Club
-        Scholarship exists to identify promising{' '}
-        <Highlight>young makers</Highlight> to give them resources to expand
-        their ambition.
+        Scholarship exists to identify promising <Highlight>young makers</Highlight>{' '}
+        to give them resources to expand their ambition.
       </Text>
       <Text f={4} mt={3}>
         Open in Cincinnati until September 9
@@ -113,9 +140,9 @@ const IndexPage = () => (
       <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          The Hack Club Scholarship is a $500 award paired with mentorship from
-          Quinn Slack given to 1 student in Cincinnati who shows outstanding
-          promise as a programmer.
+          The Hack Club Scholarship is a $250 award paired with mentorship from Quinn Slack
+          given to 1 student in Cincinnati who shows outstanding promise as
+          makers, innovators, & programmers.
         </Text>
         {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
@@ -125,24 +152,94 @@ const IndexPage = () => (
               Quinn Slack
             </Heading.h3>
             <Text f={2} color="slate">
-              <A href="https://techcrunch.com/2017/10/06/sourcegraph-raises-20m-bring-more-live-collaboration-to-programming/">Founder of Sourcegraph</A>
+              <A href="https://techcrunch.com/2017/10/06/sourcegraph-raises-20m-bring-more-live-collaboration-to-programming/">
+                Founder of Sourcegraph
+              </A>
               <br />
-              <A href="https://www.forbes.com/sites/kathleenchaykowski/2017/01/03/30-under-30-2017-the-young-innovators-transforming-enterprise-tech/#3452404d335b">Forbes 30 Under 30</A>
+              <A href="https://www.forbes.com/sites/kathleenchaykowski/2017/01/03/30-under-30-2017-the-young-innovators-transforming-enterprise-tech/#3452404d335b">
+                Forbes 30 Under 30
+              </A>
             </Text>
           </Box>
         </Profile>
       </Container>
     </Box>
     <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Flex w={1} justify="space-between">
+          <Subtitle f={[5, 6]}>Here’s the process.</Subtitle>
+          <Step
+            index={1}
+            title="Record"
+            message="Shoot a 2 minute video about your project."
+            icon="videocam"
+          />
+          <Step
+            index={2}
+            title="Submit"
+            message="Fill out your application submit it for review."
+            icon="assignment"
+          />
+          <Step
+            index={3}
+            title="Receive"
+            message="our decision a week after submissions close."
+            icon="event_available"
+          />
+        </Flex>
+      </Container>
+    </Box>
+    <Box bg={dark} color="white">
       <Container px={3} py={[5, 6]} align="center">
-        <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
+        <Subtitle>Apply now.</Subtitle>
         <Text
-          color="black"
+          color="smoke"
           f={4}
           mb={4}
           mx="auto"
           style={{ maxWidth: '48rem' }}
         >
+          Applications are open from <Highlight>August 25th</Highlight> through{' '}
+          <Highlight>September 9th</Highlight>. Decisions will be released a
+          week later.
+        </Text>
+        <ApplyButton to="/apply" bg="pink.5">
+          Apply now
+        </ApplyButton>
+      </Container>
+    </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Subtitle f={[5, 6]}>FAQ</Subtitle>
+        <Question>Can I apply?</Question>
+        <Answer>
+          If you’re currently enrolled as a student in Cincinnati public
+          schools, the answer is yes.
+        </Answer>
+        <Question>Do I need to be in a Hack Club?</Question>
+        <Answer>
+          No, you don’t need to be, and being a member or leader will not
+          influence your chances. This scholarship is open to any high schoolers.
+        </Answer>
+        <Question>What can I use the money on?</Question>
+        <Answer>
+          You can use it to fly out to San Francisco to meet Quinn Slack in
+          person.
+        </Answer>
+        <Question>I have another question</Question>
+        <Answer>
+          Please reach out to
+          <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
+            scholarship@hackclub.com
+          </A>{' '}
+          😊.
+        </Answer>
+      </Container>
+    </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
+        <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
           We’re a nonprofit network of high school computer science clubs around
           the world where members learn to code through tinkering and building
           projects.
@@ -150,19 +247,6 @@ const IndexPage = () => (
         <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
           Learn more
         </LearnButton>
-      </Container>
-    </Box>
-    <Box bg={dark} color="white">
-      <Container px={3} py={[5, 6]}>
-        <Subtitle>Apply now.</Subtitle>
-        <Text color="smoke" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          Applications are open from <Highlight>August 25th</Highlight> through{' '}
-          <Highlight>September 9th</Highlight>. Decisions will be released a
-          week after.
-        </Text>
-        <ApplyButton to="/apply" bg="pink.5">
-          Apply now
-        </ApplyButton>
       </Container>
     </Box>
     <Box bg="snow" align="center" px={3} py={5}>

@@ -1,4 +1,4 @@
-# Scholarship
+# scholarship
 
 Hack Club's scholarship website, live at https://scholarship.hackclub.com
 

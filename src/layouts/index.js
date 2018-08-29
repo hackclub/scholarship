@@ -15,7 +15,8 @@ const Layout = ({ children, data }) => (
         { name: 'theme-color', content: colors.primary },
       ]}
     />
-    <Header />
+    {/* (max@maxwofford.com) Got feedback the Header looks broken. Just commenting out for the time being */}
+    {/*<Header />*/}
     {children()}
   </ThemeProvider>
 )
