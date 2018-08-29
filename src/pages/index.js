@@ -262,12 +262,14 @@ const IndexPage = () => (
       <Heading.h2 f={4} mb={2}>
         Contact us
       </Heading.h2>
-      <Flex color="muted" align="center" justify="center">
-        <Icon glyph="email" size={32} />
-        <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
-          scholarship@hackclub.com
-        </A>
-      </Flex>
+      <A href="mailto:scholarship@hackclub.com" color="muted">
+        <Flex align="center" justify="center">
+          <Icon glyph="email" size={32} />
+          <Text.span color="slate" ml={2}>
+            scholarship@hackclub.com
+          </Text.span>
+        </Flex>
+      </A>
     </Box>
   </Fragment>
 )
