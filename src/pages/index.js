@@ -128,12 +128,7 @@ const IndexPage = () => (
       </Flex>
       <Title>The Hack Club Scholarship</Title>
       <Text f={4}>
-        Coding is the closest thing we have today to a superpower. The Hack Club
-        Scholarship exists to identify promising <Highlight>young makers</Highlight>{' '}
-        to give them resources to expand their ambition.
-      </Text>
-      <Text f={4} mt={3}>
-        Open in Cincinnati until September 9
+        A $250 unrestricted grant awarded to a high schooler in Cincinnati, giving them the resources to expand their ambition. Applications open until September 9.
       </Text>
     </Section>
     <Box bg="snow">
@@ -162,6 +157,19 @@ const IndexPage = () => (
             </Text>
           </Box>
         </Profile>
+      </Container>
+    </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
+        <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
+          We’re a nonprofit network of high school computer science clubs around
+          the world where members learn to code through tinkering and building
+          projects.
+        </Text>
+        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
+          Learn more
+        </LearnButton>
       </Container>
     </Box>
     <Box>
@@ -223,8 +231,7 @@ const IndexPage = () => (
         </Answer>
         <Question>What can I use the money on?</Question>
         <Answer>
-          You can use it to fly out to San Francisco to meet Quinn Slack in
-          person.
+          The funds are unrestricted — you can use it for anything.
         </Answer>
         <Question>I have another question</Question>
         <Answer>
@@ -234,19 +241,6 @@ const IndexPage = () => (
           </A>{' '}
           😊.
         </Answer>
-      </Container>
-    </Box>
-    <Box>
-      <Container px={3} py={[5, 6]} align="left">
-        <Subtitle f={[5, 6]}>We’re Hack Club.</Subtitle>
-        <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          We’re a nonprofit network of high school computer science clubs around
-          the world where members learn to code through tinkering and building
-          projects.
-        </Text>
-        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5">
-          Learn more
-        </LearnButton>
       </Container>
     </Box>
     <Box bg="snow" align="center" px={3} py={5}>

@@ -1,4 +1,4 @@
-# scholarship
+# Scholarship
 
 Hack Club's scholarship website, live at https://scholarship.hackclub.com
 
@@ -14,4 +14,3 @@ cd scholarship
 yarn && yarn run dev
 ```
 3. It should now be running, open [localhost:8000](http://localhost:8000) to view it
-
