@@ -1,7 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import { Text, Heading, Flex } from '@hackclub/design-system'
 import { Modal, CloseButton, Overlay } from 'components/modal'
-import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+const Link = styled(Text.span).attrs({ color: 'info' })`
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+`
 
 class VideoInstructionModal extends Component {
   state = { active: false }
@@ -17,10 +24,10 @@ class VideoInstructionModal extends Component {
         </Link>
         {this.state.active && (
           <Fragment>
-            <Modal align="left" my={4} p={[3, 4]}>
+            <Modal align="left" my={4} p={[3, 4]} color="black">
               {/* <CloseButton type="button" onClick={() => this.toggle} /> */}
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
-              <Text>
+              <Text f={2}>
                 Your application will include a 3 minute demo video uploaded to
                 Youtube. If you don’t want other people to see it, make it
                 unlisted.{' '}
@@ -30,14 +37,14 @@ class VideoInstructionModal extends Component {
                 , or we won’t be able to see it.
               </Text>
               <br />
-              <Text>
+              <Text f={2}>
                 Don’t include special effects or put time into transitions — we
                 don’t want this to turn into a video making contest. If you’re
                 going to spend time making something cool, put it into your
                 project.
               </Text>
               <br />
-              <Text>
+              <Text f={2}>
                 Don’t include loud background music — it sucks when we have to
                 give up on an application 10 seconds into their video because we
                 can’t clearly hear what they are saying. Make sure you watch the

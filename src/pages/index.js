@@ -15,6 +15,7 @@ import {
 } from '@hackclub/design-system'
 import Icon from 'spectrum-icons'
 import styled, { injectGlobal } from 'styled-components'
+import VideoInstructionModal from 'components/apply/video_instruction_modal'
 
 const dark = '#17171d'
 injectGlobal`
@@ -71,7 +72,7 @@ const btn = {
   py: 3,
   px: 4,
   f: 2,
-  chevronRight: true
+  chevronRight: true,
 }
 const LearnButton = styled(Button).attrs(btn)`
   background-image: linear-gradient(
@@ -128,16 +129,18 @@ const IndexPage = () => (
       </Flex>
       <Title>The Hack Club Scholarship</Title>
       <Text f={4}>
-        A $250 unrestricted grant awarded to a high schooler in Cincinnati, giving them the resources to expand their ambition. Applications open until September 9.
+        A $250 unrestricted grant awarded to a high schooler in Cincinnati,
+        giving them the resources to expand their ambition. Applications open
+        until September 9.
       </Text>
     </Section>
     <Box bg="snow">
       <Container px={3} py={[5, 6]}>
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
-          The Hack Club Scholarship is a $250 award paired with mentorship from Quinn Slack
-          given to 1 student in Cincinnati who shows outstanding promise as
-          makers, innovators, & programmers.
+          The Hack Club Scholarship is a $250 award paired with mentorship from
+          Quinn Slack given to 1 student in Cincinnati who shows outstanding
+          promise as a maker, innovator, & programmer.
         </Text>
         {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
@@ -191,10 +194,49 @@ const IndexPage = () => (
           <Step
             index={3}
             title="Receive"
-            message="our decision a week after submissions close."
+            message="You'll get our decision a week after submissions close."
             icon="event_available"
           />
         </Flex>
+      </Container>
+    </Box>
+    <Box>
+      <Container px={3} py={[5, 6]} align="left">
+        <Subtitle f={[5, 6]}>FAQ</Subtitle>
+        <Question>Can I apply?</Question>
+        <Answer>
+          If you’re currently enrolled as a student in Cincinnati public
+          schools, the answer is yes.
+        </Answer>
+        <Question>What are the requirements for the video?</Question>
+        <Answer>
+          Read the <VideoInstructionModal children="instructions for making your video" />.
+        </Answer>
+        <Question>Can I apply with an unfinished project?</Question>
+        <Answer>
+          Absolutely! Show us what you’ve got so far and make sure to talk about
+          where you’re hoping to take it in your application.
+        </Answer>
+        <Question>I don’t have a project</Question>
+        <Answer>You’ve got 2 weeks! Build something.</Answer>
+        <Question>Do I need to be in a Hack Club?</Question>
+        <Answer>
+          No, you don’t need to be, and being a member or leader will not
+          influence your chances. This scholarship is open to any high
+          schoolers.
+        </Answer>
+        <Question>What can I use the money on?</Question>
+        <Answer>
+          The funds are unrestricted — you can use it for anything.
+        </Answer>
+        <Question>I have another question</Question>
+        <Answer>
+          Please reach out to
+          <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
+            scholarship@hackclub.com
+          </A>{' '}
+          😊.
+        </Answer>
       </Container>
     </Box>
     <Box bg={dark} color="white">
@@ -214,33 +256,6 @@ const IndexPage = () => (
         <ApplyButton to="/apply" bg="pink.5">
           Apply now
         </ApplyButton>
-      </Container>
-    </Box>
-    <Box>
-      <Container px={3} py={[5, 6]} align="left">
-        <Subtitle f={[5, 6]}>FAQ</Subtitle>
-        <Question>Can I apply?</Question>
-        <Answer>
-          If you’re currently enrolled as a student in Cincinnati public
-          schools, the answer is yes.
-        </Answer>
-        <Question>Do I need to be in a Hack Club?</Question>
-        <Answer>
-          No, you don’t need to be, and being a member or leader will not
-          influence your chances. This scholarship is open to any high schoolers.
-        </Answer>
-        <Question>What can I use the money on?</Question>
-        <Answer>
-          The funds are unrestricted — you can use it for anything.
-        </Answer>
-        <Question>I have another question</Question>
-        <Answer>
-          Please reach out to
-          <A href="mailto:scholarship@hackclub.com" color="slate" ml={2}>
-            scholarship@hackclub.com
-          </A>{' '}
-          😊.
-        </Answer>
       </Container>
     </Box>
     <Box bg="snow" align="center" px={3} py={5}>
