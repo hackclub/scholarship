@@ -34,16 +34,18 @@ const HeroIcon = styled(Icon)`
 `
 
 const StepWrapper = styled(Box)`
-  position: relative
-  &:before {
-    z-index: -1;
+  position: relative;
+  z-index: 1;
+  &:after {
     content: '${({ index }) => index}.';
+    z-index: -1;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
     font-size: 6em;
     position: absolute;
     top: 15px;
     left: -25px;
     font-weight: bold;
-    color: ${({ theme }) => theme.colors.gray[1]};
+    color: #fff;
     line-height: 0;
   }
 `
@@ -175,7 +177,7 @@ const IndexPage = () => (
         </LearnButton>
       </Container>
     </Box>
-    <Box>
+    <Box bg="snow">
       <Container px={3} py={[5, 6]} align="left">
         <Flex w={1} justify="space-between">
           <Subtitle f={[5, 6]}>Here’s the process.</Subtitle>
