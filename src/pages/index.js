@@ -33,7 +33,7 @@ const HeroIcon = styled(Icon)`
   );
 `
 
-const StepWrapper = styled(Box)`
+const StepCounter = styled(Flex)`
   position: relative;
   z-index: 1;
   &:after {
@@ -50,13 +50,15 @@ const StepWrapper = styled(Box)`
   }
 `
 const Step = ({ title, icon, message, index }) => (
-  <StepWrapper style={{ maxWidth: '20rem' }} px={2} index={index}>
-    <DSIcon name={icon} size={48} />
-    <Box>
-      <Heading>{title}</Heading>
-      <Text>{message}</Text>
-    </Box>
-  </StepWrapper>
+  <Box mt={5}>
+    <StepCounter index={index} flexDirection="row" align="center">
+      <DSIcon name={icon} size={48} />
+      <Heading> {title}</Heading>
+    </StepCounter>
+    <Text f={3} style={{ maxWidth: '36rem' }}>
+      {message}
+    </Text>
+  </Box>
 )
 
 const Question = styled(Text).attrs({ f: 4, mt: 3, bold: true })`
@@ -175,22 +177,38 @@ const IndexPage = () => (
     </Box>
     <Box bg="snow">
       <Container px={3} py={[5, 6]} align="left">
-        <Flex w={1} justify="space-between">
+        <Flex w={1} justify="space-between" flexDirection="column">
           <Subtitle f={[5, 6]}>Here’s the process.</Subtitle>
           <Step
             index={1}
-            title="Record"
-            message="Shoot a 2 minute video about your project."
-            icon="videocam"
+            title="Build"
+            message={
+              <Fragment>
+                Choose a project to build, or something you’ve already worked
+                on. Look at the <A href="#example-projects">example projects in the FAQ</A> to get an idea of we’re looking for.
+              </Fragment>
+            }
+            icon="build"
           />
           <Step
             index={2}
-            title="Submit"
-            message="Fill out your application submit it for review."
-            icon="assignment"
+            title="Record"
+            message={
+              <Fragment>
+                Shoot a 2 minute video about your project. Make sure to follow
+                the <VideoInstructionModal children="video guidelines" />.
+              </Fragment>
+            }
+            icon="videocam"
           />
           <Step
             index={3}
+            title="Submit"
+            message="Once you fill out your application, submit it. You’ll receive a confirmation that it was submitted successfully."
+            icon="assignment"
+          />
+          <Step
+            index={4}
             title="Receive"
             message="You'll get our decision a week after submissions close."
             icon="event_available"
@@ -212,22 +230,22 @@ const IndexPage = () => (
           influence your chances. This scholarship is open to any high
           schoolers.
         </Answer>
-        <Question>What sort of projects should I talk about?</Question>
+        <Question id="example-projects">What sort of projects should I talk about?</Question>
         <Answer>
           If you’re looking for inspiration, check out these{' '}
           <Text.span bold>example projects</Text.span> from high schoolers
           around the world
           <ul>
             <li>
-              <A href="https://lachlanjc.me/fossilfunded">Fossil Funded</A> –
+              <A href="https://lachlanjc.me/fossilfunded" bold>Fossil Funded</A> –
               see who funds your local representatives.
             </li>
             <li>
-              <A href="https://github.com/jajoosam/zap">Zap</A> – search the web
+              <A href="https://github.com/jajoosam/zap" bold>Zap</A> – search the web
               for any text you select.
             </li>
             <li>
-              <A href="https://getnoodl.es/">Noodles</A> – save all your
+              <A href="https://getnoodl.es/" bold>Noodles</A> – save all your
               recipies in one place.
             </li>
           </ul>
