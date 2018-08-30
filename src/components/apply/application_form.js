@@ -3,7 +3,7 @@ import api from 'api'
 import storage from 'storage'
 import Link from 'gatsby-link'
 import { Heading, Field, Button } from '@hackclub/design-system'
-import VideoInstructionModal from 'components/apply/video_instruction_modal'
+import VideoInstructionModal from 'components/video_instruction_modal'
 import * as yup from 'yup'
 import { withFormik } from 'formik'
 

@@ -15,7 +15,7 @@ import {
 } from '@hackclub/design-system'
 import Icon from 'spectrum-icons'
 import styled, { injectGlobal } from 'styled-components'
-import VideoInstructionModal from 'components/apply/video_instruction_modal'
+import VideoInstructionModal from 'components/video_instruction_modal'
 
 const dark = '#17171d'
 injectGlobal`

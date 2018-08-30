@@ -28,7 +28,7 @@ class VideoInstructionModal extends Component {
               {/* <CloseButton type="button" onClick={() => this.toggle} /> */}
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
               <Text f={2}>
-                Your application will include a 3 minute demo video uploaded to
+                Your application will include a 2 minute demo video uploaded to
                 Youtube. If you don’t want other people to see it, make it
                 unlisted.{' '}
                 <Text.span bold>
