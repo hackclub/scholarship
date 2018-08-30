@@ -141,7 +141,6 @@ const IndexPage = () => (
           The Hack Club Scholarship is a $250 award paired with mentorship from
           Quinn Slack given to one student in Cincinnati interested in tech.
         </Text>
-        {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
           <Avatar size={72} src="quinn_slack.png" />
           <Box align="left" ml={[3, 4]}>
@@ -211,13 +210,30 @@ const IndexPage = () => (
         <Answer>
           Read the <VideoInstructionModal children="instructions for making your video" />.
         </Answer>
+        <Question>Can I use prior projects in the video?</Question>
+        <Answer>
+          Absolutely! You’re free to use any projects you’ve previously built, or start building something new.
+        </Answer>
+        <Question>Can I use prior projects in the video?</Question>
+        <Answer>
+          Absolutely! You’re free to use any projects you’ve previously built, or start building something new.
+        </Answer>
+        <Question>I don’t have a project</Question>
+        <Answer>You’ve got 2 weeks! Build something.</Answer>
+        <Question>I don’t have a project and don’t know what to build 😢</Question>
+        <Answer>
+          If you’re looking for inspiration, check out these projects from high schoolers around the world
+          <ul>
+            <li><A href="https://lachlanjc.me/fossilfunded">Fossil Funded</A> see who funds your local representatives</li>
+            <li><A href="https://github.com/jajoosam/zap">Zap</A> search the web for any text you select</li>
+            <li><A href="https://getnoodl.es/">Noodles</A> save all your recipies in one place</li>
+          </ul>
+        </Answer>
         <Question>Can I apply with an unfinished project?</Question>
         <Answer>
           Absolutely! Show us what you’ve got so far and make sure to talk about
           where you’re hoping to take it in your application.
         </Answer>
-        <Question>I don’t have a project</Question>
-        <Answer>You’ve got 2 weeks! Build something.</Answer>
         <Question>Do I need to be in a Hack Club?</Question>
         <Answer>
           No, you don’t need to be, and being a member or leader will not
