@@ -50,7 +50,7 @@ const StepCounter = styled(Flex)`
   }
 `
 const Step = ({ title, icon, message, index }) => (
-  <Box mt={5}>
+  <Box px={3}>
     <StepCounter index={index} flexDirection="row" align="center">
       <DSIcon name={icon} size={48} />
       <Heading> {title}</Heading>
@@ -177,15 +177,16 @@ const IndexPage = () => (
     </Box>
     <Box bg="snow">
       <Container px={3} py={[5, 6]} align="left">
-        <Flex w={1} justify="space-between" flexDirection="column">
-          <Subtitle f={[5, 6]}>Here’s the process.</Subtitle>
+        <Subtitle>Here’s the process.</Subtitle>
+        <Flex flexDirection="row" mt={5}>
           <Step
             index={1}
             title="Build"
             message={
               <Fragment>
                 Choose a project to build, or something you’ve already worked
-                on. Look at the <A href="#example-projects">example projects in the FAQ</A> to get an idea of we’re looking for.
+                on. Look at the{' '}
+                <A href="#example-projects">example projects in the FAQ</A>.
               </Fragment>
             }
             icon="build"
@@ -195,8 +196,9 @@ const IndexPage = () => (
             title="Record"
             message={
               <Fragment>
-                Shoot a 2 minute video about your project. Make sure to follow
-                the <VideoInstructionModal children="video guidelines" />.
+                Shoot a 2 minute video about yourself and your project. Make
+                sure to follow the{' '}
+                <VideoInstructionModal children="video guidelines" />.
               </Fragment>
             }
             icon="videocam"
@@ -204,14 +206,8 @@ const IndexPage = () => (
           <Step
             index={3}
             title="Submit"
-            message="Once you fill out your application, submit it. You’ll receive a confirmation that it was submitted successfully."
+            message="Once you fill out your application, submit it. You’ll receive a confirmation shortly."
             icon="assignment"
-          />
-          <Step
-            index={4}
-            title="Receive"
-            message="You'll get our decision a week after submissions close."
-            icon="event_available"
           />
         </Flex>
       </Container>
@@ -230,23 +226,31 @@ const IndexPage = () => (
           influence your chances. This scholarship is open to any high
           schoolers.
         </Answer>
-        <Question id="example-projects">What sort of projects should I talk about?</Question>
+        <Question id="example-projects">
+          What sort of projects should I talk about?
+        </Question>
         <Answer>
           If you’re looking for inspiration, check out these{' '}
           <Text.span bold>example projects</Text.span> from high schoolers
           around the world
           <ul>
             <li>
-              <A href="https://lachlanjc.me/fossilfunded" bold>Fossil Funded</A> –
-              see who funds your local representatives.
+              <A href="https://lachlanjc.me/fossilfunded" bold>
+                Fossil Funded
+              </A>{' '}
+              – see who funds your local representatives.
             </li>
             <li>
-              <A href="https://github.com/jajoosam/zap" bold>Zap</A> – search the web
-              for any text you select.
+              <A href="https://github.com/jajoosam/zap" bold>
+                Zap
+              </A>{' '}
+              – search the web for any text you select.
             </li>
             <li>
-              <A href="https://getnoodl.es/" bold>Noodles</A> – save all your
-              recipies in one place.
+              <A href="https://getnoodl.es/" bold>
+                Noodles
+              </A>{' '}
+              – save all your recipies in one place.
             </li>
           </ul>
         </Answer>
