@@ -141,8 +141,7 @@ const IndexPage = () => (
         <Subtitle>Here’s the deal.</Subtitle>
         <Text color="black" f={4} mb={4} style={{ maxWidth: '48rem' }}>
           The Hack Club Scholarship is a $250 award paired with mentorship from
-          Quinn Slack given to 1 student in Cincinnati who shows outstanding
-          promise as a maker, innovator, & programmer.
+          Quinn Slack given to one student in Cincinnati interested in tech.
         </Text>
         {/* TODO: Add a Modal with more info about Quinn Slack */}
         <Profile>
