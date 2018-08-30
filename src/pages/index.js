@@ -220,7 +220,7 @@ const IndexPage = () => (
         </Answer>
         <Question>I don’t have a project</Question>
         <Answer>You’ve got 2 weeks! Build something.</Answer>
-        <Question>I don’t have a project and don’t know what to build 😢</Question>
+        <Question>I don’t know what to build 😢</Question>
         <Answer>
           If you’re looking for inspiration, check out these projects from high schoolers around the world
           <ul>
