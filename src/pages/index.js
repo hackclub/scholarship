@@ -224,9 +224,9 @@ const IndexPage = () => (
         <Answer>
           If you’re looking for inspiration, check out these projects from high schoolers around the world
           <ul>
-            <li><A href="https://lachlanjc.me/fossilfunded">Fossil Funded</A> see who funds your local representatives</li>
-            <li><A href="https://github.com/jajoosam/zap">Zap</A> search the web for any text you select</li>
-            <li><A href="https://getnoodl.es/">Noodles</A> save all your recipies in one place</li>
+            <li><A href="https://lachlanjc.me/fossilfunded">Fossil Funded</A> – see who funds your local representatives.</li>
+            <li><A href="https://github.com/jajoosam/zap">Zap</A> – search the web for any text you select.</li>
+            <li><A href="https://getnoodl.es/">Noodles</A> – save all your recipies in one place.</li>
           </ul>
         </Answer>
         <Question>Can I apply with an unfinished project?</Question>
