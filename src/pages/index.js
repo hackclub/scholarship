@@ -114,11 +114,9 @@ const SectionHeading = styled(Heading.h3).attrs({
   mb: 3,
 })``
 
-const Highlight = styled(Text.withComponent('mark')).attrs({
+const Highlight = styled(Text.span).attrs({
   bold: true,
-  bg: 'pink.5',
   color: 'white',
-  px: 2,
 })`
   border-radius: ${({ theme }) => theme.pill};
 `
