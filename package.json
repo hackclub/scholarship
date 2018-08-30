@@ -27,7 +27,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn run social && gatsby build",
-    "social": "repng src/components/Icon.js -w 512 -h 512 -o public -f static/icon.png",
+    "social": "repng src/components/icon.js -w 512 -h 512 -o public -f static/icon.png",
     "dev": "gatsby develop",
     "fmt": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
