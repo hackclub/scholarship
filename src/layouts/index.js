@@ -7,7 +7,6 @@ import Header from '../components/header'
 
 const Layout = ({ children, data }) => (
   <ThemeProvider webfonts>
-    <html lang="en" />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
