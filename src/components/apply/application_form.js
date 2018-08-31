@@ -95,6 +95,15 @@ const InnerForm = ({
       error={touched.project_technologies && errors.project_technologies}
       placeholder="html, css, js..."
     />
+    <Field
+      label="What would you use the grant money for?"
+      name="grant_use"
+      onChange={handleChange}
+      onBlur={handleBlur}
+      value={values.grant_use}
+      error={touched.grant_use && errors.grant_use}
+      type="textarea"
+    />
     <Submit onSubmit={handleSubmit} disabled={isSubmitting} type="submit" />
   </form>
 )
