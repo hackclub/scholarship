@@ -265,11 +265,6 @@ const IndexPage = () => (
           Absolutely! You’re free to use any projects you’ve previously built,
           or start building something new.
         </Answer>
-        <Question>Can I use prior projects in the video?</Question>
-        <Answer>
-          Absolutely! You’re free to use any projects you’ve previously built,
-          or start building something new.
-        </Answer>
         <Question>I don’t have a project</Question>
         <Answer>You’ve got 2 weeks! Build something.</Answer>
         <Question>Can I apply with an unfinished project?</Question>
