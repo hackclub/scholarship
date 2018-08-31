@@ -6,6 +6,7 @@ import { Heading, Field, Button } from '@hackclub/design-system'
 import VideoInstructionModal from 'components/video_instruction_modal'
 import * as yup from 'yup'
 import { withFormik } from 'formik'
+import styled from 'styled-components'
 
 const fieldNames = {
   email: 'entry.381661279',
@@ -17,7 +18,7 @@ const fieldNames = {
   project_technologies: 'entry.73657139',
 }
 
-const Submit = Button.withComponent(Field)
+const Submit = styled(Button.withComponent('input')).attrs({ w: 1, mt: 3 })``
 
 const InnerForm = ({
   values,
