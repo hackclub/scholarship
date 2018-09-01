@@ -12,10 +12,11 @@ const Link = styled(Text.span).attrs({ color: 'info' })`
 
 class VideoInstructionModal extends Component {
   state = { active: false }
+
   toggle = () => {
-    setTimeout(() => this.setState(state => ({ active: !state.active })), 100)
+    this.setState(state => ({ active: !state.active }))
   }
-  setState = this.setState.bind(this)
+
   render() {
     return (
       <Fragment>
@@ -25,7 +26,7 @@ class VideoInstructionModal extends Component {
         {this.state.active && (
           <Fragment>
             <Modal align="left" my={4} p={[3, 4]} color="black">
-              {/* <CloseButton type="button" onClick={() => this.toggle} /> */}
+              <CloseButton type="button" onClick={this.toggle} />
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
               <Text f={2}>
                 Your application will include a 2 minute demo video uploaded to
