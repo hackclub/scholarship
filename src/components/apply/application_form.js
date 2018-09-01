@@ -87,7 +87,7 @@ const InnerForm = ({
       error={touched.project_description && errors.project_description}
       type="textarea"
       rows="6"
-      style={{resize: 'vertical'}}
+      style={{ resize: 'vertical' }}
     />
     <Field
       label="List the technologies you used"
@@ -107,7 +107,7 @@ const InnerForm = ({
       error={touched.grant_use && errors.grant_use}
       type="textarea"
       rows="6"
-      style={{resize: 'vertical'}}
+      style={{ resize: 'vertical' }}
     />
     <Submit onSubmit={handleSubmit} disabled={isSubmitting} type="submit" />
   </form>

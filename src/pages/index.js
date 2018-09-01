@@ -170,7 +170,11 @@ const IndexPage = () => (
           the world where members learn to code through tinkering and building
           projects.
         </Text>
-        <LearnButton href="https://hackclub.com/?ref=scholarship" bg="cyan.5" target="_blank">
+        <LearnButton
+          href="https://hackclub.com/?ref=scholarship"
+          bg="cyan.5"
+          target="_blank"
+        >
           Go to the organization
         </LearnButton>
       </Container>
