@@ -29,7 +29,7 @@ class VideoInstructionModal extends Component {
               <Heading.h2 mb={3}>The Project Video</Heading.h2>
               <Text f={2}>
                 Your application will include a 2 minute demo video uploaded to
-                Youtube. If you don’t want other people to see it, make it
+                YouTube. If you don’t want other people to see it, make it
                 unlisted.{' '}
                 <Text.span bold>
                   Don’t mark it as private or disallow embedding
@@ -46,7 +46,7 @@ class VideoInstructionModal extends Component {
                 Don’t include loud background music — it sucks when we have to
                 give up on an application 10 seconds into their video because we
                 can’t clearly hear what they are saying. Make sure you watch the
-                video after uploading it to Youtube to make sure the audio is
+                video after uploading it to YouTube to make sure the audio is
                 good.
               </Text>
             </Modal>
