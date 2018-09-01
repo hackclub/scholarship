@@ -273,7 +273,7 @@ const IndexPage = () => (
               <A href="https://getnoodl.es/" bold>
                 Noodles
               </A>{' '}
-              – save all your recipies in one place.
+              – save all your recipes in one place.
             </li>
           </ul>
         </Answer>
