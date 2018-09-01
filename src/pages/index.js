@@ -212,6 +212,25 @@ const IndexPage = () => (
         </Flex>
       </Container>
     </Box>
+    <Box bg={dark} color="white">
+      <Container px={3} py={[5, 6]} align="center">
+        <Subtitle>Apply now.</Subtitle>
+        <Text
+          color="smoke"
+          f={4}
+          mb={4}
+          mx="auto"
+          style={{ maxWidth: '48rem' }}
+        >
+          Applications are open from <Highlight>August 25th</Highlight> through{' '}
+          <Highlight>September 9th</Highlight>. Decisions will be released a
+          week later.
+        </Text>
+        <ApplyButton to="/apply" bg="pink.5">
+          Apply now
+        </ApplyButton>
+      </Container>
+    </Box>
     <Box>
       <Container px={3} py={[5, 6]} align="left">
         <Subtitle f={[5, 6]}>FAQ</Subtitle>
@@ -284,25 +303,6 @@ const IndexPage = () => (
           </A>{' '}
           😊.
         </Answer>
-      </Container>
-    </Box>
-    <Box bg={dark} color="white">
-      <Container px={3} py={[5, 6]} align="center">
-        <Subtitle>Apply now.</Subtitle>
-        <Text
-          color="smoke"
-          f={4}
-          mb={4}
-          mx="auto"
-          style={{ maxWidth: '48rem' }}
-        >
-          Applications are open from <Highlight>August 25th</Highlight> through{' '}
-          <Highlight>September 9th</Highlight>. Decisions will be released a
-          week later.
-        </Text>
-        <ApplyButton to="/apply" bg="pink.5">
-          Apply now
-        </ApplyButton>
       </Container>
     </Box>
     <Box bg="snow" align="center" px={3} py={5}>
