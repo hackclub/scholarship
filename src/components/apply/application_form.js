@@ -16,6 +16,7 @@ const fieldNames = {
   project_video_url: 'entry.1590760348',
   project_description: 'entry.2103516634',
   project_technologies: 'entry.73657139',
+  grant_use: 'entry.XXXXXX',
 }
 
 const Submit = styled(Button.withComponent('input')).attrs({ w: 1, mt: 3 })``
@@ -121,6 +122,7 @@ export default withFormik({
     project_video_url: '',
     project_description: '',
     project_technologies: '',
+    grant_use: '',
   }),
   validationSchema: yup.object().shape({
     email: yup
@@ -135,7 +137,8 @@ export default withFormik({
       .required('required')
       .url(),
     project_description: yup.string().required('required'),
-    project_technologies: yup.string(),
+    project_technologies: yup.string().required('required'),
+    grant_use: yup.string().required('required'),
   }),
   handleSubmit: (data, { setSubmitting }) => {
     const gFormPath =
