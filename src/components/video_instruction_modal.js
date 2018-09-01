@@ -13,16 +13,15 @@ const Link = styled(Text.span).attrs({ color: 'info' })`
 class VideoInstructionModal extends Component {
   state = { active: false }
 
-  toggle = () => {
+  toggle = e => {
+    e.preventDefault()
     this.setState(state => ({ active: !state.active }))
   }
 
   render() {
     return (
       <Fragment>
-        <Link onClick={() => this.setState({ active: true })}>
-          {this.props.children}
-        </Link>
+        <Link onClick={this.toggle}>{this.props.children}</Link>
         {this.state.active && (
           <Fragment>
             <Modal align="left" my={4} p={[3, 4]} color="black">
