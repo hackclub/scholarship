@@ -236,8 +236,8 @@ const IndexPage = () => (
         <Subtitle f={[5, 6]}>FAQ</Subtitle>
         <Question>Can I apply?</Question>
         <Answer>
-          If you’re currently enrolled as a student in Cincinnati public
-          schools, the answer is yes.
+          If you’re currently enrolled as a student in Cincinnati Public
+          Schools, the answer is yes.
         </Answer>
         <Question>Do I need to be in a Hack Club?</Question>
         <Answer>
