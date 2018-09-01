@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Text, Heading, Flex } from '@hackclub/design-system'
+import { Text, Heading } from '@hackclub/design-system'
 import { Modal, CloseButton, Overlay } from 'components/modal'
 import styled from 'styled-components'
 
